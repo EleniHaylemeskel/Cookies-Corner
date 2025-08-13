@@ -1,0 +1,77 @@
+<label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required minlength="2" 
+                           aria-required="true" aria-describedby="name-desc">
+                    <span id="name-desc">Enter your full name.</span>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required 
+                           aria-required="true" aria-describedby="email-desc">
+                    <span id="email-desc">We'll send your order confirmation here.</span>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="^\+?\d{10,15}$" 
+                           aria-describedby="phone-desc">
+                    <span id="phone-desc">Include country code. Example: +123-456-78-90</span>
+                </fieldset>
+
+                <!-- Read-only field-->
+                 <label for="order-id">Order ID:</label>
+                 <input type="text" id="order-id" name="order-id" value="123456" readonly aria-readonly="true">
+                 </fieldset>
+
+                <!-- Order Details -->
+                <fieldset>
+                    <legend>Order Details</legend>
+
+                    <label for="flavor-select">Select Cookie Flavor:</label>
+                    <select id="flavor-select" name="flavor" required aria-required="true">
+                        <option value="">Choose a flavor</option>
+                        <option value="chocolate-chip">Chocolate Chip</option>
+                        <option value="peanut-butter">Peanut Butter</option>
+                        <option value="oatmeal-raisin">Oatmeal Raisin</option>
+                        <option value="double-chocolate">Double Chocolate</option>
+                        <option value="custom">Custom Mix</option>
+                    </select>
+
+                    <label for="quantity">Quantity (Dozens):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20" required
+                           aria-required="true" placeholder="1">
+                </fieldset>
+
+                <!-- Preferences -->
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <p>Subscribe to our newsletter:</p>
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes"> Yes, send me updates
+                    </label>
+
+                    <p>Delivery Option:</p>
+                    <label>
+                        <input type="radio" name="delivery" value="pickup" required aria-required="true"> Pickup
+                    </label>
+                    <label>
+                        <input type="radio" name="delivery" value="delivery"> Home Delivery
+                    </label>
+                </fieldset>
+
+                <!-- Special Instructions -->
+                <fieldset>
+                    <legend>Special Instructions</legend>
+                    <label for="instructions">Comments:</label>
+                    <textarea id="instructions" name="instructions" rows="4" placeholder="E.g., Allergies, custom notes..." maxlength="300"></textarea>
+                </fieldset>
+
+                <!-- Submit -->
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Pen Pal Pastries. All rights reserved.</p>
+    </footer>
+</body>
+</html>
